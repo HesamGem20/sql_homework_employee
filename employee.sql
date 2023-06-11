@@ -8,11 +8,11 @@ GROUP BY dept_emp.dept_no, employees.gender;
 
 
 -- Task 2:
-To find the lowest department number:
+-- To find the lowest department number:
 
 SELECT MIN(dept_no) AS lowest_dept_no FROM dept_emp;
 
-To find the highest department number:
+-- To find the highest department number:
 
 SELECT MAX(dept_no) AS highest_dept_no FROM dept_emp;
 
@@ -35,7 +35,7 @@ SELECT * FROM employees WHERE YEAR(hire_date) = 2000;
 
 
 -- Task 5:
-To list all employees who are engineers:
+-- To list all employees who are engineers:
 
 SELECT employees.*
 FROM employees
@@ -43,7 +43,7 @@ JOIN titles ON employees.emp_no = titles.emp_no
 WHERE titles.title = 'Engineer'
 LIMIT 10;
 
-To list senior engineers:
+-- To list senior engineers:
 
 SELECT employees.*
 FROM employees
@@ -67,7 +67,7 @@ BEGIN
 END //
 DELIMITER ;
 
-After creating the procedure, you can call it for employee 10010:
+-- After creating the procedure, you can call it for employee 10010:
 
 CALL last_dept(10010);
 
@@ -135,15 +135,15 @@ BEGIN
     RETURN salary_diff;
 END;
 
-To find the highest salary for employee no. 11356:
+-- To find the highest salary for employee no. 11356:
 
 SELECT find_salary_difference(11356, 'max');
 
-To find the lowest salary for employee no. 11356:
+-- To find the lowest salary for employee no. 11356:
 
 SELECT find_salary_difference(11356, 'min');
 
-To find the salary difference for employee no. 11356:
+-- To find the salary difference for employee no. 11356:
 
 SELECT find_salary_difference(11356, 'diff');
 
