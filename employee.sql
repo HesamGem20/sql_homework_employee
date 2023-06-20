@@ -1,5 +1,5 @@
 -- Task 1:
-
+--Revision one
 SELECT dept_emp.dept_no, employees.gender, AVG(salaries.salary) AS average_earnings
 FROM dept_emp
 JOIN employees ON dept_emp.emp_no = employees.emp_no
